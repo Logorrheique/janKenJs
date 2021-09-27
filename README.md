@@ -1,2 +1,2 @@
 # janKenJs
-# JS JANKEN
+# JS JANKEN absolutely bad and ugly ... ->
