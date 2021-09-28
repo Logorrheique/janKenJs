@@ -8,8 +8,6 @@ function randomNegativePositive(){
         return 0;    
     else return -1;
 }
-
-
 function janKen(playerHand){//playerHand = stone OR paper OR scissors
     const robotHand = randomNegativePositive();
     console.log(robotHand);
@@ -33,19 +31,28 @@ function janKen(playerHand){//playerHand = stone OR paper OR scissors
 
 function robotGetStone(){
     let stone = document.getElementById('robotArea');
-    stone.innerHTML = 'Le robot avait fait Pierre';
+    stone.innerHTML = 'Le robot a fait Pierre';
 }
 function robotGetPaper(){
     let paper = document.getElementById('robotArea');
-    paper.innerHTML = 'Le robot avait fait Papier';
+    paper.innerHTML = 'Le robot a fait Papier';
 }
 function robotGetScissors(){
     let scissors = document.getElementById('robotArea');
-    scissors.innerHTML = 'Le robot avait fait Ciseaux';
+    scissors.innerHTML = 'Le robot a fait Ciseaux';
 }
 
-function win(){alert('C WIN')}
-function lose(){alert('C LOSE')}
-function egal(){alert('EGALITE')}
+function win(){
+    let win = document.getElementById('resultArea');
+    win.innerHTML = `C'est WINNN GG`;
+}
+function lose(){
+    let lose = document.getElementById('resultArea');
+    lose.innerHTML = `C'est LOSEEEE`;
+}
+function egal(){
+    let egal = document.getElementById('resultArea');
+    egal.innerHTML = `égalité (la chance..)`;
+}
 
 

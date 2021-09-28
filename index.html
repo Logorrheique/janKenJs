@@ -8,11 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="robotArea">ALLEZ JOUE LA </div>
-    <button class="stone" type="button" onclick="janKen('stone');">STONE</button>
-    <button class="paper" type="button" onclick="janKen('paper');">PAPER</button>
-    <button class="scissors" type="button"onclick="janKen('scissors');">SCISSORS</button>
-    
+    <div class="top">
+        <h3 id="robotArea">PIERRE, FEUILLE, CISEAUX....??</h3>
+        <h2 id="resultArea">...</h2>   
+    </div>
+    <div class="center">       
+        <button class="paper" type="button" onclick="janKen('paper');"><img src="papier.svg" alt="">PAPER</button>
+        <button class="stone" type="button" onclick="janKen('stone');"><img src="stone.svg" alt=""> STONE</button>
+        <button class="scissors" type="button"onclick="janKen('scissors');"><img src="scissors.svg" alt="">SCISSORS</button>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
