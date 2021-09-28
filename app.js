@@ -10,49 +10,30 @@ function randomNegativePositive(){
 }
 function janKen(playerHand){//playerHand = stone OR paper OR scissors
     const robotHand = randomNegativePositive();
+
     console.log(robotHand);
     //STONE HAND
     if(playerHand == 'stone'){
-        if(robotHand == -1){robotGetScissors();lose();}
-        else if (robotHand == 1){robotGetPaper();win();}
-        else {robotGetStone();egal();}
+        if(robotHand == -1)result('scissors','loose');
+        else if (robotHand == 1)result('paper','win');
+        else result('stone','égalité');
     }
     else if(playerHand == 'paper'){
-        if(robotHand == -1)robotGetPaper();
-        else if (robotHand == 1)robotGetScissors();
-        else robotGetPaper();
+        if(robotHand == -1)result('stone','loose');
+        else if (robotHand == 1)result('scissors','win');
+        else result('paper','égalité');
     }
     else{
-        if(robotHand == -1)robotGetPaper();
-        else if (robotHand == 1)robotGetPaper();
-        else robotGetScissors();
+        if(robotHand == -1)result('paper','loose');
+        else if (robotHand == 1)result('stone','win');
+        else result('scissors','égalité');
     }
 }
-
-function robotGetStone(){
-    let stone = document.getElementById('robotArea');
-    stone.innerHTML = 'Le robot a fait Pierre';
-}
-function robotGetPaper(){
-    let paper = document.getElementById('robotArea');
-    paper.innerHTML = 'Le robot a fait Papier';
-}
-function robotGetScissors(){
-    let scissors = document.getElementById('robotArea');
-    scissors.innerHTML = 'Le robot a fait Ciseaux';
-}
-
-function win(){
-    let win = document.getElementById('resultArea');
-    win.innerHTML = `C'est WINNN GG`;
-}
-function lose(){
-    let lose = document.getElementById('resultArea');
-    lose.innerHTML = `C'est LOSEEEE`;
-}
-function egal(){
-    let egal = document.getElementById('resultArea');
-    egal.innerHTML = `égalité (la chance..)`;
+function result(robotResult,gameResult){
+    let result = document.getElementById('resultArea');
+    let robotHand = document.getElementById('robotArea');
+    result.innerHTML =  gameResult;
+    robotHand.innerHTML = 'Le robot a fait '+ robotResult;
 }
 
 
