@@ -14,19 +14,19 @@ function janKen(playerHand){//playerHand = stone OR paper OR scissors
     console.log(robotHand);
     //STONE HAND
     if(playerHand == 'stone'){
-        if(robotHand == -1)result('scissors','loose');
-        else if (robotHand == 1)result('paper','win');
-        else result('stone','égalité');
+        if(robotHand == -1)result('ciseaux','loose');
+        else if (robotHand == 1)result('papier','win');
+        else result('pierre','égalité');
     }
     else if(playerHand == 'paper'){
-        if(robotHand == -1)result('stone','loose');
-        else if (robotHand == 1)result('scissors','win');
-        else result('paper','égalité');
+        if(robotHand == -1)result('pierre','loose');
+        else if (robotHand == 1)result('ciseaux','win');
+        else result('papier','égalité');
     }
     else{
-        if(robotHand == -1)result('paper','loose');
-        else if (robotHand == 1)result('stone','win');
-        else result('scissors','égalité');
+        if(robotHand == -1)result('papier','loose');
+        else if (robotHand == 1)result('pierre','win');
+        else result('ciseaux','égalité');
     }
 }
 function result(robotResult,gameResult){

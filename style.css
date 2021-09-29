@@ -7,7 +7,6 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif  ;
     height: 700px;
 }
-
 .top{
     
     display: flex;
@@ -19,16 +18,26 @@ body{
 }
 .center{
     display: flex;
+    width: 100%;
+    height: 250px;
+    justify-content: space-around;
     background-color:transparent;
 }
-.center>button{
-    display: flex;
-    flex-direction: column;
+
+.tool{
+    height: 250px;
+    width:250px;;
+    display: flex; 
+    justify-content: center;
+    align-self: center;
     align-items: center;
-    justify-content: space-around;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;  
+    background-color: rgb(41, 40, 40);
+    border: 4px solid rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 50% 20% / 10% 40%;
+
+}
+.tool:hover,img:hover{
+    width:300px;
+    height: 300px;
 }
